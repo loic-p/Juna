@@ -1,11 +1,12 @@
 # Juna
+```
        _
       | |
       | |_   _ _ __   __ _
   _   | | | | | '_ \ / _` |
  | |__| | |_| | | | | (_| |
   \____/ \__,_|_| |_|\__,_|
-
+```
 Juna is an old school project that I wrote for my lambda calculus class (taught
 by Didier Rémy, François Pottier and Yann Régis-Gianas) for my masters, in 2018.
 
@@ -34,7 +35,7 @@ I now attach the original README (in French) that I wrote at the time:
 
 Un programme est constitué d'un seul fichier (pour le moment), qui
 comporte une suite de déclarations de type puis un terme.
-
+```
 typedecl ::=
 | 'type' family = intro | ... | intro 'end'
 
@@ -68,7 +69,7 @@ type ::=
 | type * type
 | family type ... type
 | type -> type
-
+```
 Les fonctions prédéfinies sont : print_int, print_string, fst, snd
 Les types prédéfinis sont : string, int, unit, bool
 Les constructeurs prédéfinis sont : True, False, Unit
@@ -148,14 +149,14 @@ Ne sont pas implantés (et devraient l'être) :
 
 
 La structure du code est la suivante :
-
+```
         Lexer + Parser             TypeDeclChecking
   Juna ---------------> RawLambda -----------------> TypeDeclLambda -----
                                                                         |
                                                                         |
   C <-------- Top <-------- Tail <--------- TypeLambda <-----------------
       Finish        Defun            CPS                  TypeInference
-
+```
 - Lexer : très peu modifié, quelques lexèmes + chaînes de caractères rajoutés.
 - Parser : assez lourdement modifié, pour l'adapter à la syntaxe de Juna.
   J'ai gardé la structure, en rajoutant au fur et à mesure. C'est pas très joli.
