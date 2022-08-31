@@ -7,7 +7,7 @@
  | |__| | |_| | | | | (_| |
   \____/ \__,_|_| |_|\__,_|
 ```
-Juna is an old school project that I wrote for my lambda calculus class (taught
+Juna is a school project that I wrote for my lambda calculus class (taught
 by Didier Rémy, François Pottier and Yann Régis-Gianas) for my masters, in 2018.
 
 Juna is a compiler for a call-by-value lambda calculus with a type system that
@@ -24,7 +24,7 @@ pattern matching, mutual recursion, pattern exhaustivity checks, and it has no
 garbage collection (which means no memory managment features at all: an
 infinite loop will quickly fill your memory).
 
-Juna is mostly a sandbox for cool concepts that I tried to understand at the
+Juna is mostly a sandbox for cool PL concepts that I tried to understand at the
 time, and is not intented for actual use. However, it does work: the folder
 "tests" contains a handful of demonstration programs, including a merge sort
 and some demonstration of GADT capabilities.
