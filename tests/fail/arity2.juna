@@ -1,0 +1,5 @@
+type t =
+| T : forall a, a -> a -> t
+end
+
+T 2

@@ -1,0 +1,5 @@
+let identity : forall a, a -> a =
+  fun x -> x in
+
+let x = print_int (identity 2) in
+print_string (identity " can be given to the same function as this string!")

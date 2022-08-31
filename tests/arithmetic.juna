@@ -1,0 +1,12 @@
+let a = 3 in
+let a = a + a in
+let a = a * a in
+
+match a > 3 with
+| True =>
+  let x = print_int a in
+  print_string " is greater than 3.\n"
+| False =>
+  let x = print_int a in
+  print_string " is lower than 3.\n"
+end

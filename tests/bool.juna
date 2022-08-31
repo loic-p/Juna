@@ -1,0 +1,32 @@
+let not = fun x ->
+  match x with
+  | True => False
+  | False => True
+  end
+in
+
+let or = fun x y ->
+  match x with
+  | True => True
+  | False => y
+  end
+in
+
+let and = fun x y ->
+  match x with
+  | True => y
+  | False => False
+  end
+in
+
+let print_bool = fun x ->
+  match x with
+  | True => print_string "true"
+  | False => print_string "false"
+  end
+in
+
+print_bool
+  (not (and
+    (or False True)
+    (or True False)))

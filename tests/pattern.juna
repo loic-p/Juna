@@ -1,0 +1,4 @@
+match True with
+| True => print_string "ok"
+| False => print_string "not ok"
+end

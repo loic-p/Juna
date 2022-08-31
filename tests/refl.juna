@@ -1,0 +1,13 @@
+type eq a b =
+| Refl : forall x, x -> eq x x
+end
+
+let f : forall a b, a -> eq a b -> b =
+  fun x e ->
+  match e with
+  | Refl y => x
+  end
+in
+
+let i = f 3 (Refl 0) in
+print_int i

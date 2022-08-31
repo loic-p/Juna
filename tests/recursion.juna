@@ -1,0 +1,7 @@
+let rec f = fun x ->
+  let y = print_int x in
+  let y = print_string " " in
+  f (x + 1)
+in
+
+f 2

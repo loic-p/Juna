@@ -1,0 +1,5 @@
+type t a =
+| T : forall b, b -> int
+end
+
+print_string ":("

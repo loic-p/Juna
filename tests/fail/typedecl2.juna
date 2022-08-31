@@ -1,0 +1,6 @@
+type int a b =
+| C1 : int bool bool
+| C2 : int int int
+end
+
+print_string ":("

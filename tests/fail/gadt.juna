@@ -1,0 +1,19 @@
+type repr a =
+| Int : int -> repr int
+| String : string -> repr string
+| Arrow : forall b c, repr b -> repr c -> repr (b -> c)
+end
+
+let rec print_repr =
+  fun x ->
+  match x with
+  | Int i => print_int i
+  | String s => print_string s
+  | Arrow y z =>
+    let u = print_repr y in
+    let u = print_string " -> " in
+    print_repr z
+  end
+in
+
+print_repr (Arrow (Int 3) (String "gadt"))
